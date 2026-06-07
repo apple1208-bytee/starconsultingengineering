@@ -7,8 +7,12 @@ import { Icon } from "@/components/ui/Icon";
 import { services } from "@/data/services";
 import { industries } from "@/data/industries";
 import { site } from "@/data/site";
+import { getAllBlogs } from "@/lib/blogs";
+import { BlogCard } from "@/components/blogs/BlogCard";
 
 export default function Home() {
+  const latestBlogs = getAllBlogs().slice(0, 3);
+
   return (
     <>
       {/* Hero */}
@@ -112,6 +116,17 @@ export default function Home() {
               <span className="text-sm font-semibold text-navy-900">{i.name}</span>
             </Link>
           ))}
+        </div>
+      </Section>
+
+      {/* Latest Insights */}
+      <Section className="bg-steel-50">
+        <SectionHeading eyebrow="Engineering Notes" title="Latest Insights" subtitle="Technical articles, deep-dives, and code interpretations written by our engineers." />
+        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {/* We will load this client-side or use a server component fetch, but since page.tsx is a server component, we can just import getAllBlogs here. */}
+        </div>
+        <div className="mt-10 text-center">
+          <ButtonLink href="/blogs" variant="secondary">View all articles <ArrowRight size={16} /></ButtonLink>
         </div>
       </Section>
 

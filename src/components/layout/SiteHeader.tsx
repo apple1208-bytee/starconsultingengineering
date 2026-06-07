@@ -48,6 +48,7 @@ export function SiteHeader() {
 
         {/* Desktop nav */}
         <nav ref={menuRef} className="hidden items-center gap-1 lg:flex">
+          <NavLink href="/" onClick={() => setOpenMenu(null)}>Home</NavLink>
           <NavLink href="/about" onClick={() => setOpenMenu(null)}>About</NavLink>
           <Dropdown
             label="Services"
@@ -59,7 +60,7 @@ export function SiteHeader() {
                 <Link
                   key={s.slug}
                   href={`/services/${s.slug}`}
-                  className="rounded-md px-3 py-2 text-sm text-steel-700 hover:bg-navy-50 hover:text-navy-900"
+                  className="rounded-md px-3 py-2 text-sm text-steel-700 hover:bg-navy-50 hover:text-navy-900"  
                   onClick={() => setOpenMenu(null)}
                 >
                   {s.title}
@@ -77,7 +78,7 @@ export function SiteHeader() {
                 <Link
                   key={i.slug}
                   href={`/industries/${i.slug}`}
-                  className="rounded-md px-3 py-2 text-sm text-steel-700 hover:bg-navy-50 hover:text-navy-900"
+                  className="rounded-md px-3 py-2 text-sm text-steel-700 hover:bg-navy-50 hover:text-navy-900"  
                   onClick={() => setOpenMenu(null)}
                 >
                   {i.name}
@@ -86,6 +87,7 @@ export function SiteHeader() {
             </div>
           </Dropdown>
           <NavLink href="/tools" onClick={() => setOpenMenu(null)}>Tools</NavLink>
+          <NavLink href="/blogs" onClick={() => setOpenMenu(null)}>Blogs</NavLink>
         </nav>
 
         <div className="hidden lg:block">
@@ -110,10 +112,12 @@ export function SiteHeader() {
       {mobileOpen && (
         <div className="border-t border-navy-700 bg-navy-900 lg:hidden">
           <div className="space-y-1 px-6 py-4">
+            <MobileLink href="/" onClick={() => setMobileOpen(false)}>Home</MobileLink>
             <MobileLink href="/about" onClick={() => setMobileOpen(false)}>About</MobileLink>
             <MobileGroup label="Services" items={services.map((s) => ({ href: `/services/${s.slug}`, label: s.title }))} onNavigate={() => setMobileOpen(false)} />
             <MobileGroup label="Industries" items={industries.map((i) => ({ href: `/industries/${i.slug}`, label: i.name }))} onNavigate={() => setMobileOpen(false)} />
             <MobileLink href="/tools" onClick={() => setMobileOpen(false)}>Tools</MobileLink>
+            <MobileLink href="/blogs" onClick={() => setMobileOpen(false)}>Blogs</MobileLink>
             <MobileLink href="/contact" onClick={() => setMobileOpen(false)}>Contact</MobileLink>
             <p className="pt-3 text-xs text-steel-500">{site.email}</p>
           </div>
