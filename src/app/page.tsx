@@ -17,28 +17,41 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-[#0A0A0A] text-white">
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-20 mix-blend-luminosity" 
-          style={{ backgroundImage: "url('/images/data-grid.jpg')" }} 
-        />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-500/15 via-[#0A0A0A]/80 to-[#0A0A0A] blur-[80px]" />
-        <div className="relative mx-auto flex min-h-[88vh] max-w-[1280px] flex-col justify-center px-6 py-24">
-          <p className="reveal mb-5 text-sm font-semibold uppercase tracking-widest text-amber-500" style={{ ["--delay" as string]: "0ms" }}>
-            Piping · Stress · Vibration Consultancy
-          </p>
-          <h1 className="reveal max-w-4xl text-[length:var(--text-6xl)] font-extrabold leading-[1.05] tracking-tighter" style={{ ["--delay" as string]: "80ms" }}>
-            Engineering Precision.<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">Industrial Excellence.</span>
-          </h1>
-          <p className="reveal mt-6 max-w-2xl text-lg text-steel-400" style={{ ["--delay" as string]: "160ms" }}>
-            Specialist piping, stress and vibration engineering for oil &amp; gas, LNG,
-            petrochemical and power industries - analysis you can build on.
-          </p>
-          <div className="reveal mt-9 flex flex-wrap gap-4" style={{ ["--delay" as string]: "240ms" }}>
-            <ButtonLink href="/contact" size="lg">Discuss Your Project <ArrowRight size={18} /></ButtonLink>
-            <ButtonLink href="/services" size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/5 backdrop-blur-sm">
-              Explore Our Services
-            </ButtonLink>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-amber-500/20 via-[#0A0A0A]/80 to-[#0A0A0A] blur-[80px] pointer-events-none" />
+        <div className="relative mx-auto flex min-h-[88vh] max-w-[1280px] flex-col lg:flex-row items-center justify-center lg:justify-between px-6 py-24 gap-12">
+          {/* Left Text */}
+          <div className="w-full lg:w-1/2 flex flex-col justify-center">
+            <p className="reveal mb-5 text-sm font-semibold uppercase tracking-widest text-amber-500" style={{ ["--delay" as string]: "0ms" }}>
+              Piping · Stress · Vibration Consultancy
+            </p>
+            <h1 className="reveal max-w-2xl text-[length:var(--text-6xl)] font-extrabold leading-[1.05] tracking-tighter" style={{ ["--delay" as string]: "80ms" }}>
+              Engineering Precision.<br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">Industrial Excellence.</span>
+            </h1>
+            <p className="reveal mt-6 max-w-xl text-lg text-steel-400" style={{ ["--delay" as string]: "160ms" }}>
+              Specialist piping, stress and vibration engineering for oil &amp; gas, LNG,
+              petrochemical and power industries - analysis you can build on.
+            </p>
+            <div className="reveal mt-9 flex flex-wrap gap-4" style={{ ["--delay" as string]: "240ms" }}>
+              <ButtonLink href="/contact" size="lg">Discuss Your Project <ArrowRight size={18} /></ButtonLink>
+              <ButtonLink href="/services" size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/5 backdrop-blur-sm">
+                Explore Our Services
+              </ButtonLink>
+            </div>
+          </div>
+          
+          {/* Right Image Frame / Slideshow */}
+          <div className="reveal w-full lg:w-1/2 relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-white/10" style={{ ["--delay" as string]: "320ms" }}>
+            <img 
+              src="/images/hero-marquee-1.png" 
+              alt="Industrial Plant 1"
+              className="absolute inset-0 h-full w-full object-cover animate-fade-1"
+            />
+            <img 
+              src="/images/hero-marquee-2.png" 
+              alt="Industrial Plant 2"
+              className="absolute inset-0 h-full w-full object-cover animate-fade-2"
+            />
           </div>
         </div>
       </section>

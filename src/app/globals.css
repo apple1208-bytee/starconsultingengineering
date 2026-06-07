@@ -91,3 +91,23 @@ h1, h2, h3, h4 {
     linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
   background-size: 48px 48px;
 }
+
+@utility animate-fade-1 {
+  animation: fade1 12s infinite;
+}
+
+@utility animate-fade-2 {
+  animation: fade2 12s infinite;
+}
+
+@keyframes fade1 {
+  0%, 40% { opacity: 1; }
+  50%, 90% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fade2 {
+  0%, 40% { opacity: 0; }
+  50%, 90% { opacity: 1; }
+  100% { opacity: 0; }
+}
