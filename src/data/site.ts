@@ -6,7 +6,7 @@ export const site = {
     "Specialist piping, stress and vibration engineering consultancy for oil & gas, LNG, petrochemical, and power industries.",
   email: "nirala.nirajkumar@gmail.com",
   phone: "+91 7977234709 / +91 7506049160",
-  address: "Hazira Industrial Area, Surat, Gujarat, India",
+  address: "Navi Mumbai, Thane - 400701, Maharashtra, India",
   principal: {
     name: "NIRAJ KUMAR NIRALA, B.E. (MECH)",
     title: "CHARTERED ENGINEER (INDIA), MECHANICAL ENGINEERING DIVISION",

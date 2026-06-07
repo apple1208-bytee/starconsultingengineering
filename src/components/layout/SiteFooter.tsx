@@ -36,6 +36,7 @@ export function SiteFooter() {
             <li><Link href="/about" className="hover:text-amber-400">About</Link></li>
             <li><Link href="/industries" className="hover:text-amber-400">Industries</Link></li>
             <li><Link href="/tools" className="hover:text-amber-400">Engineering Tools</Link></li>
+            <li><Link href="/careers" className="hover:text-amber-400">Careers</Link></li>
             <li><Link href="/contact" className="hover:text-amber-400">Contact</Link></li>
           </ul>
           <ul className="mt-4 space-y-2 text-sm text-steel-400">

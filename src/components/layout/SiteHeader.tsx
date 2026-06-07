@@ -88,6 +88,7 @@ export function SiteHeader() {
           </Dropdown>
           <NavLink href="/tools" onClick={() => setOpenMenu(null)}>Tools</NavLink>
           <NavLink href="/blogs" onClick={() => setOpenMenu(null)}>Blogs</NavLink>
+          <NavLink href="/careers" onClick={() => setOpenMenu(null)}>Careers</NavLink>
         </nav>
 
         <div className="hidden lg:block">
@@ -118,6 +119,7 @@ export function SiteHeader() {
             <MobileGroup label="Industries" items={industries.map((i) => ({ href: `/industries/${i.slug}`, label: i.name }))} onNavigate={() => setMobileOpen(false)} />
             <MobileLink href="/tools" onClick={() => setMobileOpen(false)}>Tools</MobileLink>
             <MobileLink href="/blogs" onClick={() => setMobileOpen(false)}>Blogs</MobileLink>
+            <MobileLink href="/careers" onClick={() => setMobileOpen(false)}>Careers</MobileLink>
             <MobileLink href="/contact" onClick={() => setMobileOpen(false)}>Contact</MobileLink>
             <p className="pt-3 text-xs text-steel-500">{site.email}</p>
           </div>
