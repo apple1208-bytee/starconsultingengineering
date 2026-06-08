@@ -13,7 +13,7 @@ export const site = {
     credentials: "MEMBER: THE INSTITUTION OF ENGINEERS INDIA, M-1789338",
   },
   social: {
-    linkedin: "https://linkedin.com",
+    linkedin: "https://www.linkedin.com/in/niraj-kumar-nirala-a3630732",
     youtube: "https://youtube.com",
   },
   stats: [
