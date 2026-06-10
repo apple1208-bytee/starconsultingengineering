@@ -86,12 +86,12 @@ export default async function BlogsPage() {
           </div>
         </div>
 
-        <div className="relative flex overflow-x-hidden pb-16 pause-marquee">
+        <div className="relative flex overflow-x-hidden pb-16 my-pause">
           {/* Gradient Masks */}
           <div className="absolute inset-y-0 left-0 z-20 w-32 bg-linear-to-r from-white to-transparent pointer-events-none" />
           <div className="absolute inset-y-0 right-0 z-20 w-32 bg-linear-to-l from-white to-transparent pointer-events-none" />
           
-          <div className="flex animate-marquee whitespace-nowrap items-stretch gap-8 px-6">
+          <div className="flex my-marquee whitespace-nowrap items-stretch gap-8 px-6">
             {/* Multiple copies for seamless loop on all screen sizes */}
             {[...marqueeItems, ...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, i) => (
               <div key={i} className="w-[400px] flex-shrink-0 whitespace-normal">

@@ -100,11 +100,11 @@ h1, h2, h3, h4 {
   animation: fade2 12s infinite;
 }
 
-.animate-marquee {
+.my-marquee {
   animation: marquee 60s linear infinite;
 }
 
-.pause-marquee:hover .animate-marquee {
+.my-pause:hover .my-marquee {
   animation-play-state: paused;
 }
 
