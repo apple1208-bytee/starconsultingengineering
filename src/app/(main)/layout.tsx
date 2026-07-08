@@ -15,13 +15,50 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3000"),
+  // Replace localhost with your production URL
+  metadataBase: new URL("https://starconsulting-engineering.vercel.app"),
+
   title: {
-    default: "Star Consulting Engineering - Piping, Stress & Vibration Consultancy",
+    default:
+      "Star Consulting Engineering | Piping Stress Analysis, CAESAR II & Engineering Consultancy",
     template: "%s | Star Consulting Engineering",
   },
+
   description:
-    "Specialist piping, stress and vibration engineering consultancy for oil & gas, LNG, petrochemical, and power industries.",
+    "Star Consulting Engineering provides piping stress analysis, CAESAR II analysis, piping flexibility studies, vibration analysis, pipeline engineering, and engineering consulting services for oil & gas, LNG, petrochemical, power, and process industries.",
+
+  keywords: [
+    "Star Consulting Engineering",
+    "Star Consultant",
+    "Piping Stress Analysis",
+    "CAESAR II",
+    "Pipeline Engineering",
+    "Piping Engineering",
+    "Stress Analysis",
+    "Vibration Analysis",
+    "Engineering Consultancy",
+    "Pipe Stress",
+    "Piping Design",
+    "Oil and Gas Engineering",
+    "LNG Engineering",
+    "Petrochemical Engineering",
+  ],
+
+  openGraph: {
+    title:
+      "Star Consulting Engineering | Piping Stress Analysis & Engineering Consultancy",
+    description:
+      "Engineering consultancy specializing in piping stress analysis, CAESAR II, vibration analysis, and pipeline engineering.",
+    url: "https://starconsulting-engineering.vercel.app",
+    siteName: "Star Consulting Engineering",
+    type: "website",
+    locale: "en_US",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
