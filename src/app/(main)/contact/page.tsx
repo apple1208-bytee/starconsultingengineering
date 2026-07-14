@@ -5,7 +5,7 @@ import { site } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Get in touch with Star Consulting Engineering about your project.",
+  description: "Get in touch with Flexotech Consulting Engineers  about your project.",
 };
 
 export default function ContactPage() {
