@@ -4,7 +4,7 @@ import { site } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Careers",
-  description: "Join Star Consulting Engineering - discover open vacancies and career opportunities.",
+  description: "Join Flexotech Consulting Engineers - discover open vacancies and career opportunities.",
 };
 
 export default function CareersPage() {
