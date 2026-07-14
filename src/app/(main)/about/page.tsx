@@ -7,7 +7,7 @@ import { site } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "About Star Consulting Engineering - a specialist piping, stress and vibration consultancy.",
+  description: "About Flexotech Consulting Engineers  - a specialist piping, stress and vibration consultancy.",
 };
 
 const values = [
