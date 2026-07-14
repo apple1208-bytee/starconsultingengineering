@@ -15,21 +15,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  // Replace localhost with your production URL
-  metadataBase: new URL("https://starconsulting-engineering.vercel.app"),
+  // Production URL
+  metadataBase: new URL("https://flexotechconsultingengineers.com"),
 
   title: {
     default:
-      "Star Consulting Engineering | Piping Stress Analysis, CAESAR II & Engineering Consultancy",
-    template: "%s | Star Consulting Engineering",
+      "Flexotech Consulting Engineers | Piping Stress Analysis, CAESAR II & Engineering Consultancy",
+    template: "%s | Flexotech Consulting Engineers",
   },
 
   description:
-    "Star Consulting Engineering provides piping stress analysis, CAESAR II analysis, piping flexibility studies, vibration analysis, pipeline engineering, and engineering consulting services for oil & gas, LNG, petrochemical, power, and process industries.",
+    "Flexotech Consulting Engineers provides professional piping stress analysis, CAESAR II analysis, piping flexibility studies, vibration analysis, pipeline engineering, and engineering consultancy services for oil & gas, LNG, petrochemical, power, and process industries.",
 
   keywords: [
-    "Star Consulting Engineering",
-    "Star Consultant",
+    "Flexotech Consulting Engineers",
+    "Flexotech",
     "Piping Stress Analysis",
     "CAESAR II",
     "Pipeline Engineering",
@@ -42,22 +42,33 @@ export const metadata: Metadata = {
     "Oil and Gas Engineering",
     "LNG Engineering",
     "Petrochemical Engineering",
+    "Power Plant Engineering",
+    "Industrial Pipeline Engineering",
   ],
 
   openGraph: {
     title:
-      "Star Consulting Engineering | Piping Stress Analysis & Engineering Consultancy",
+      "Flexotech Consulting Engineers | Piping Stress Analysis & Engineering Consultancy",
+
     description:
-      "Engineering consultancy specializing in piping stress analysis, CAESAR II, vibration analysis, and pipeline engineering.",
-    url: "https://starconsulting-engineering.vercel.app",
-    siteName: "Star Consulting Engineering",
+      "Professional engineering consultancy specializing in piping stress analysis, CAESAR II, vibration analysis, pipeline engineering, and industrial engineering solutions.",
+
+    url: "https://flexotechconsultingengineers.com",
+
+    siteName: "Flexotech Consulting Engineers",
+
     type: "website",
+
     locale: "en_US",
   },
 
   robots: {
     index: true,
     follow: true,
+  },
+
+  alternates: {
+    canonical: "https://flexotechconsultingengineers.com",
   },
 };
 
