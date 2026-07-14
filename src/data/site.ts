@@ -1,6 +1,6 @@
 export const site = {
-  name: "Star Consulting Engineering",
-  shortName: "Star Consulting",
+  name: "flexotechconsultingengineers",
+  shortName: " flexotech Consulting",
   tagline: "Engineering Precision. Industrial Excellence.",
   description:
     "Specialist piping, stress and vibration engineering consultancy for oil & gas, LNG, petrochemical, and power industries.",
