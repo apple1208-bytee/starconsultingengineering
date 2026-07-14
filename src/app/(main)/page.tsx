@@ -1,5 +1,13 @@
 import Link from "next/link";
-import { ArrowRight, ShieldCheck, Gauge, Clock, Layers, Lock, Award } from "lucide-react";
+import {
+  ArrowRight,
+  ShieldCheck,
+  Gauge,
+  Clock,
+  Layers,
+  Lock,
+  Award,
+} from "lucide-react";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { ButtonLink } from "@/components/ui/Button";
@@ -10,7 +18,7 @@ import { site } from "@/data/site";
 import { getAllBlogs } from "@/lib/blogs";
 import { BlogCard } from "@/components/blogs/BlogCard";
 
-export const revalidate = 60; // Revalidate page every 60 seconds
+export const revalidate = 60;
 
 export default async function Home() {
   const latestBlogs = await getAllBlogs();
@@ -21,37 +29,70 @@ export default async function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden bg-[#0A0A0A] text-white">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-amber-500/20 via-[#0A0A0A]/80 to-[#0A0A0A] blur-[80px] pointer-events-none" />
-        <div className="relative mx-auto flex min-h-[88vh] max-w-[1280px] flex-col lg:flex-row items-center justify-center lg:justify-between px-6 py-24 gap-12">
-          {/* Left Text */}
-          <div className="w-full lg:w-1/2 flex flex-col justify-center">
-            <p className="reveal mb-5 text-sm font-semibold uppercase tracking-widest text-amber-500" style={{ ["--delay" as string]: "0ms" }}>
+
+        <div className="relative mx-auto flex min-h-[88vh] max-w-[1280px] flex-col items-center justify-center gap-12 px-6 py-24 lg:flex-row lg:justify-between">
+          {/* Left Content */}
+          <div className="flex w-full flex-col justify-center lg:w-1/2">
+            <p
+              className="reveal mb-5 text-sm font-semibold uppercase tracking-widest text-amber-500"
+              style={{ ["--delay" as string]: "0ms" }}
+            >
               Piping · Stress · Vibration Consultancy
             </p>
-            <h1 className="reveal max-w-2xl text-[length:var(--text-6xl)] font-extrabold leading-[1.05] tracking-tighter" style={{ ["--delay" as string]: "80ms" }}>
-              Engineering Precision.<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">Industrial Excellence.</span>
+
+            <h1
+              className="reveal max-w-2xl text-[length:var(--text-6xl)] font-extrabold leading-[1.05] tracking-tighter"
+              style={{ ["--delay" as string]: "80ms" }}
+            >
+              Engineering Precision.
+              <br />
+              <span className="bg-gradient-to-r from-amber-400 to-amber-200 bg-clip-text text-transparent">
+                Industrial Excellence.
+              </span>
             </h1>
-            <p className="reveal mt-6 max-w-xl text-lg text-steel-400" style={{ ["--delay" as string]: "160ms" }}>
-              Specialist piping, stress and vibration engineering for oil &amp; gas, LNG,
-              petrochemical and power industries - analysis you can build on.
+
+            <p
+              className="reveal mt-6 max-w-xl text-lg text-steel-400"
+              style={{ ["--delay" as string]: "160ms" }}
+            >
+              Flexotech Consulting Engineers delivers specialist piping stress
+              analysis, vibration studies, CAESAR II solutions, and engineering
+              consultancy services for oil & gas, LNG, petrochemical, power,
+              and process industries.
             </p>
-            <div className="reveal mt-9 flex flex-wrap gap-4" style={{ ["--delay" as string]: "240ms" }}>
-              <ButtonLink href="/contact" size="lg">Discuss Your Project <ArrowRight size={18} /></ButtonLink>
-              <ButtonLink href="/services" size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/5 backdrop-blur-sm">
+
+            <div
+              className="reveal mt-9 flex flex-wrap gap-4"
+              style={{ ["--delay" as string]: "240ms" }}
+            >
+              <ButtonLink href="/contact" size="lg">
+                Discuss Your Project <ArrowRight size={18} />
+              </ButtonLink>
+
+              <ButtonLink
+                href="/services"
+                size="lg"
+                variant="outline"
+                className="border-white/20 text-white backdrop-blur-sm hover:bg-white/5"
+              >
                 Explore Our Services
               </ButtonLink>
             </div>
           </div>
-          
-          {/* Right Image Frame / Slideshow */}
-          <div className="reveal w-full lg:w-1/2 relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-white/10" style={{ ["--delay" as string]: "320ms" }}>
-            <img 
-              src="/images/hero-marquee-1.png" 
+
+          {/* Hero Images */}
+          <div
+            className="reveal relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 shadow-2xl lg:w-1/2"
+            style={{ ["--delay" as string]: "320ms" }}
+          >
+            <img
+              src="/images/hero-marquee-1.png"
               alt="Industrial Plant 1"
               className="absolute inset-0 h-full w-full object-cover animate-fade-1"
             />
-            <img 
-              src="/images/hero-marquee-2.png" 
+
+            <img
+              src="/images/hero-marquee-2.png"
               alt="Industrial Plant 2"
               className="absolute inset-0 h-full w-full object-cover animate-fade-2"
             />
@@ -59,58 +100,81 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Trust bar */}
+      {/* Trust Bar */}
       <div className="border-b border-steel-800 bg-[#0A0A0A]">
         <div className="mx-auto grid max-w-[1280px] grid-cols-2 gap-6 px-6 py-8 md:grid-cols-4">
           {site.stats.map((s) => (
             <div key={s.label} className="text-center">
-              <p className="font-mono text-3xl font-bold text-amber-500">{s.value}</p>
-              <p className="mt-1 text-sm font-medium text-steel-500">{s.label}</p>
+              <p className="font-mono text-3xl font-bold text-amber-500">
+                {s.value}
+              </p>
+              <p className="mt-1 text-sm font-medium text-steel-500">
+                {s.label}
+              </p>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Company overview */}
+      {/* Company Overview */}
       <Section>
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div>
             <SectionHeading
-              eyebrow="Who we are"
-              title="Specialist engineers for the systems that matter most"
-              subtitle="We are a focused consultancy delivering piping stress, vibration and safety engineering to operators and EPC contractors across heavy industry."
+              eyebrow="Who We Are"
+              title="Specialist Engineers for the Systems That Matter Most"
+              subtitle="Flexotech Consulting Engineers is a specialist engineering consultancy delivering piping stress analysis, vibration engineering, and industrial engineering solutions for EPC contractors and plant operators."
             />
+
             <p className="mt-6 text-steel-600">
-              Our work keeps critical piping within code, controls vibration on rotating
-              equipment, and resolves in-service problems fast. Every deliverable is grounded
-              in ASME and API practice and written to be acted on.
+              Our work keeps critical piping systems within international
+              standards, controls vibration in rotating equipment, and solves
+              complex engineering challenges through reliable, practical
+              solutions.
             </p>
+
             <div className="mt-8">
-              <ButtonLink href="/about" variant="secondary">More about us <ArrowRight size={16} /></ButtonLink>
+              <ButtonLink href="/about" variant="secondary">
+                More About Us <ArrowRight size={16} />
+              </ButtonLink>
             </div>
           </div>
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl">
-            <img 
-              src="/images/oil-refinery.jpg" 
-              alt="Oil refinery at night" 
+
+          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+            <img
+              src="/images/oil-refinery.jpg"
+              alt="Industrial Refinery"
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 hover:scale-105 grayscale hover:grayscale-0"
             />
           </div>
         </div>
       </Section>
 
-      {/* Services snapshot */}
+      {/* Services */}
       <Section className="bg-white">
-        <SectionHeading eyebrow="What we do" title="Engineering services" subtitle="Ten focused service lines covering the full piping engineering lifecycle." center />
+        <SectionHeading
+          eyebrow="What We Do"
+          title="Engineering Services"
+          subtitle="Professional engineering solutions covering the complete piping engineering lifecycle."
+          center
+        />
+
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {services.map((s) => (
-            <Link key={s.slug} href={`/services/${s.slug}`} className="group">
+            <Link
+              key={s.slug}
+              href={`/services/${s.slug}`}
+              className="group"
+            >
               <Card className="h-full">
                 <Icon name={s.icon} className="text-amber-500" size={28} />
-                <h3 className="mt-4 text-lg font-semibold text-navy-900">{s.title}</h3>
+                <h3 className="mt-4 text-lg font-semibold text-navy-900">
+                  {s.title}
+                </h3>
                 <p className="mt-2 text-sm text-steel-600">{s.subtitle}</p>
+
                 <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-navy-700 group-hover:text-amber-500">
-                  Learn more <ArrowRight size={14} />
+                  Learn More <ArrowRight size={14} />
                 </span>
               </Card>
             </Link>
@@ -120,7 +184,12 @@ export default async function Home() {
 
       {/* Industries */}
       <Section>
-        <SectionHeading eyebrow="Where we work" title="Industries served" center />
+        <SectionHeading
+          eyebrow="Where We Work"
+          title="Industries Served"
+          center
+        />
+
         <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
           {industries.map((i) => (
             <Link
@@ -129,42 +198,89 @@ export default async function Home() {
               className="flex flex-col items-center gap-3 rounded-lg border border-steel-200 bg-white p-6 text-center transition-all hover:-translate-y-1 hover:border-amber-400 hover:shadow-[var(--shadow-card-hover)]"
             >
               <Icon name={i.icon} className="text-navy-700" size={26} />
-              <span className="text-sm font-semibold text-navy-900">{i.name}</span>
+              <span className="text-sm font-semibold text-navy-900">
+                {i.name}
+              </span>
             </Link>
           ))}
         </div>
       </Section>
 
-      {/* Latest Insights */}
+      {/* Blogs */}
       <Section className="bg-steel-50">
-        <SectionHeading eyebrow="Engineering Notes" title="Latest Insights" subtitle="Technical articles, deep-dives, and code interpretations written by our engineers." />
+        <SectionHeading
+          eyebrow="Engineering Notes"
+          title="Latest Insights"
+          subtitle="Technical articles and engineering knowledge from the Flexotech Consulting Engineers team."
+        />
+
         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {topThree.map((blog) => (
             <BlogCard key={blog.slug} blog={blog} />
           ))}
         </div>
+
         <div className="mt-10 text-center">
-          <ButtonLink href="/blogs" variant="secondary">View all articles <ArrowRight size={16} /></ButtonLink>
+          <ButtonLink href="/blogs" variant="secondary">
+            View All Articles <ArrowRight size={16} />
+          </ButtonLink>
         </div>
       </Section>
 
-      {/* Why choose us */}
-      <Section dark className="bg-[#0A0A0A] relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-navy-500/10 blur-[120px] rounded-full pointer-events-none" />
+      {/* Why Choose Us */}
+      <Section dark className="relative overflow-hidden bg-[#0A0A0A]">
+        <div className="absolute left-1/2 top-1/2 h-[800px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-navy-500/10 blur-[120px]" />
+
         <div className="relative">
-          <SectionHeading eyebrow="Why Star Consulting" title="Built on engineering depth" light center />
+          <SectionHeading
+            eyebrow="Why Flexotech Consulting Engineers"
+            title="Built on Engineering Excellence"
+            subtitle="Delivering reliable engineering solutions with technical expertise, precision, and industry experience."
+            light
+            center
+          />
+
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { icon: Layers, title: "Technical depth", body: "Practising specialists, not generalists - deep expertise in stress and vibration." },
-              { icon: ShieldCheck, title: "Standards expertise", body: "Fluent in ASME B31, API 6xx and the codes your projects depend on." },
-              { icon: Clock, title: "Rapid turnaround", body: "Mobilised in 48 hours for urgent in-service troubleshooting." },
-              { icon: Lock, title: "Confidentiality", body: "Client work treated with strict engineering confidentiality." },
-              { icon: Gauge, title: "Multi-software", body: "CAESAR II, AutoPIPE, ANSYS and more - the right tool for the job." },
-              { icon: Award, title: "Proven track record", body: "Hundreds of projects across heavy industry worldwide." },
+              {
+                icon: Layers,
+                title: "Technical Expertise",
+                body: "Experienced specialists delivering reliable piping stress and vibration engineering solutions.",
+              },
+              {
+                icon: ShieldCheck,
+                title: "International Standards",
+                body: "Compliant with ASME, API, and internationally recognized engineering codes.",
+              },
+              {
+                icon: Clock,
+                title: "Fast Project Delivery",
+                body: "Efficient engineering support with timely project execution.",
+              },
+              {
+                icon: Lock,
+                title: "Complete Confidentiality",
+                body: "Professional handling of every engineering project with strict confidentiality.",
+              },
+              {
+                icon: Gauge,
+                title: "Advanced Engineering Software",
+                body: "Expertise in CAESAR II, AutoPIPE, ANSYS, and other engineering platforms.",
+              },
+              {
+                icon: Award,
+                title: "Trusted Engineering Partner",
+                body: "Supporting industrial clients with dependable engineering consultancy services.",
+              },
             ].map((p) => (
-              <div key={p.title} className="rounded-xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 shadow-2xl transition-all hover:bg-white/10">
+              <div
+                key={p.title}
+                className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl transition-all hover:bg-white/10"
+              >
                 <p.icon className="text-amber-400" size={26} />
-                <h3 className="mt-4 text-lg font-semibold text-white tracking-tight">{p.title}</h3>
+                <h3 className="mt-4 text-lg font-semibold text-white">
+                  {p.title}
+                </h3>
                 <p className="mt-2 text-sm text-steel-400">{p.body}</p>
               </div>
             ))}
@@ -172,14 +288,23 @@ export default async function Home() {
         </div>
       </Section>
 
-      {/* CTA banner */}
+      {/* CTA */}
       <section className="bg-gradient-to-r from-amber-500 to-amber-400">
         <div className="mx-auto flex max-w-[1280px] flex-col items-center justify-between gap-6 px-6 py-16 text-center md:flex-row md:text-left">
           <div>
-            <h2 className="text-3xl font-bold text-navy-900">Have a technical challenge?</h2>
-            <p className="mt-2 text-navy-800">Our engineers are ready to help you design, analyse and solve.</p>
+            <h2 className="text-3xl font-bold text-navy-900">
+              Have a Technical Challenge?
+            </h2>
+
+            <p className="mt-2 text-navy-800">
+              Contact Flexotech Consulting Engineers today and let our experts
+              help you design, analyse, and solve your engineering challenges.
+            </p>
           </div>
-          <ButtonLink href="/contact" variant="secondary" size="lg">Get in Touch <ArrowRight size={18} /></ButtonLink>
+
+          <ButtonLink href="/contact" variant="secondary" size="lg">
+            Get in Touch <ArrowRight size={18} />
+          </ButtonLink>
         </div>
       </section>
     </>
